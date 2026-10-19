@@ -1,0 +1,6 @@
+# Merge with organization settings; only the keys below differ.
+inheritance: true
+reviews:
+  path_filters:
+    - "!.specify/**"
+    - "!.claude/skills/speckit-*/**"
