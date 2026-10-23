@@ -205,7 +205,7 @@ def _extract_highest_number(names: list[str], scope_prefix: str) -> int:
             if not name.startswith(scope_prefix):
                 continue
             name = name[len(scope_prefix) :]
-        # Local patch (owner 2026-10-19): only top-level feature branches count.
+        # Only top-level feature branches count.
         if "/" in name:
             continue
         name = name.rsplit("/", 1)[-1]

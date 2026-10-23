@@ -94,7 +94,7 @@ function Get-HighestNumberFromNames {
         if ($ScopePrefix) {
             $name = $name.Substring($ScopePrefix.Length)
         }
-        # Local patch (owner 2026-10-19): only top-level feature branches count; release/2026-..., fix/156-... must not set the number.
+        # Only top-level feature branches count; release/2026-..., fix/156-... must not set the number.
         if ($name.Contains('/')) { continue }
         $hasTimestampPrefix = $name -match '^\d{8}-\d{6}-'
         $hasMalformedTimestamp = ($name -match '^\d{7}-\d{6}-') -or ($name -match '^(?:\d{7}|\d{8})-\d{6}$')

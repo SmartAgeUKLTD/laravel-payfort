@@ -147,7 +147,7 @@ _extract_highest_number() {
                 *) continue ;;
             esac
         fi
-        # Local patch (owner 2026-10-19): only top-level feature branches count; release/2026-..., fix/156-... must not set the number.
+        # Only top-level feature branches count; release/2026-..., fix/156-... must not set the number.
         case "$name" in */*) continue ;; esac
         if echo "$name" | grep -Eq '^[0-9]{3,}-' \
             && ! echo "$name" | grep -Eq '^[0-9]{8}-[0-9]{6}-' \
