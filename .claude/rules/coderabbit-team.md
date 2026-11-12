@@ -13,5 +13,5 @@ Same file in every SmartAgeUKLTD repo and branch. Applies to every PR Claude ope
   - `@coderabbitai fix-ci` when CI fails; review the stacked fix before merging.
   - `@coderabbitai plan` on a GitHub issue before building a feature.
 - Do not reply to or steer those runs with follow-up instructions, and never use `@coderabbitai autofix`, the Slack bot, Coding Agent or Automations: follow-up turns and agents bill per minute.
-- Auto approval is OFF: CodeRabbit never approves. Merge only when the latest commit has a successful CodeRabbit review (Actionable comments 0, checks pass) and tests pass, or, for "No files to review" only, when a human reviewer approves.
+- Auto approval is OFF: CodeRabbit never approves. Merge only when tests and all checks pass AND either the latest commit has a successful CodeRabbit review (Actionable comments 0) or, for "No files to review" only, a human reviewer approves.
 - `@coderabbitai configuration` shows the resolved config; `@coderabbitai help` lists commands.
